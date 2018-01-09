@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.koinnbit.MainActivity">
+
+    <Spinner
+        android:id="@+id/exchange"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="197dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:alwaysDrawnWithCache="false"
+        android:minWidth="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/refreshButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/currency"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="454dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exchange"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/currencyData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="29dp"
+        android:layout_marginTop="168dp"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="none"
+        android:text="@string/select_currency_first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/refreshButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currency" />
+
+    <EditText
+        android:id="@+id/dreamValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="124dp"
+        android:layout_marginEnd="22dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0.00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/currencySubscribe"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/currencySubscribe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="73dp"
+        android:text="@string/subs_currency_button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/dreamValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dreamValue" />
+
+    <ImageButton
+        android:id="@+id/refreshButton"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="237dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/currencyData"
+        app:layout_constraintTop_toBottomOf="@+id/exchange"
+        app:srcCompat="@drawable/refresh_image" />
+
+</android.support.constraint.ConstraintLayout>
